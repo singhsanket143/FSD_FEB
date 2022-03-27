@@ -7,4 +7,4 @@ function subset(arr, res, i) {
     subset(arr, res, i+1);
 }
 
-subset([5,6,7,8], "", 0);
+subset([4, 9], "", 0);
