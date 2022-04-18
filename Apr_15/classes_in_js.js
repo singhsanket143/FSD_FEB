@@ -4,6 +4,7 @@ class Product {
         this.name = n;
         this.price = p;
         this.#discount = 0;
+        // return {name: "Sanket"}
     }
 
     display () {
@@ -34,5 +35,9 @@ console.log(iphone);
 // iphone.display();
 // console.log(iphone.discountValue);
 
-console.log(typeof iphone); // object
-console.log(typeof Product); // function 
+// console.log(typeof iphone); // object
+// console.log(typeof Product); // function 
+// console.log(iphone.discount)
+// iphone.discount = 10;
+// console.log(iphone.discount)
+// // console.log(iphone.#discount)

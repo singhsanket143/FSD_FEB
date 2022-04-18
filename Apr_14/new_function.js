@@ -1,6 +1,10 @@
 function ask_ques(ques) {
     console.log(this.teacher, ques);
-    // return {name: "Sanket"}
+    console.log("value of this is", this)
+    this.price = 10;
+    console.log("value of this is", this)
+
+    return {name: "Sanket"}
 }
 
 // let empty = {

@@ -24,6 +24,11 @@ class Complex {
     }
 }
 
+
+// function addcompelx(c1, c2) {
+//     return new Complex(c1.getReal+c2.getReal, c1.getImaginary+c2.getImaginary);
+// }
+
 let c1 = new Complex(3, 7);
 c1.display()
 let c2 = new Complex(4, 5);
