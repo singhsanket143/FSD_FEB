@@ -8,8 +8,17 @@ const listener = function(req, res) {
         Details of the http response that we will send is going to be set inside `res`
     */
     console.log("A new HTTP Request received");
-    // To prepare a response for the client we can use res paraemeter of this function
-    res.end('Hello world!! Welcome to the server'); // Ending the request with the following response
+    if(req.url == "/details") {
+        res.end('This is a basic node server');
+    } else if (req.url == "/home") {
+        res.end('Welcome to the home page');
+    } else if (req.url == "/error") {
+        res.end('You landed at a wrong page');
+    } else {
+        // To prepare a response for the client we can use res paraemeter of this function
+        res.end('Hello world!! Welcome to the server'); // Ending the request with the following response
+    }
+    
 }
 
 /*
