@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.send('Hello world !!!');
 });
 
-app.get('/home',isSignedIn, isAuthorized, (req, res) => {
+app.post('/home',isSignedIn, isAuthorized, (req, res) => {
     // this callback will be executed when we receive any request on /home
     console.log('Received a new request on /home');
     res.send('Home page');
