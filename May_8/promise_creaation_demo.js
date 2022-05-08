@@ -4,7 +4,7 @@ function fetch(url) {
         // let's mimic the functionality, say it takes 5 sec to fetch the data
         let data = { // assuming this data was fetched
             message: 'completed fetching',
-            success: true
+            success: false
         }
         setTimeout(function () {
             // let's create a dummy data
@@ -46,6 +46,9 @@ function fetch1(url) {
 // })
 // console.log("hurray");
 
+function greeting(data) {
+    console.log("this is a greeting for", data);
+}
 
 const response = fetch("www.xyz.com");
 response.then(function (data) {
@@ -60,5 +63,10 @@ response.then(function (data) {
 response.then(function (data) {
     console.log("hey hi", data);
 });
+response.then(greeting);
+response.catch(function (data) {
+    console.log("catched the error", data);
+    return "Something went wrong"
+})
 console.log("hurray");
 
