@@ -1,5 +1,5 @@
 const express = require('express');
-const configs = require('./configs/serverconfig');
+const configs = require('./config/serverconfig');
 const categoryRoutes = require('./routes/category.routes');
 const app = express();
 
