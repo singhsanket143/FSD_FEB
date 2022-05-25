@@ -1,25 +1,26 @@
 const express = require('express');
+const city = require('./models/city');
 const app = express();
 const Student = require('./models/index').Student;
 const Course = require('./models/index').Course;
+const City = require('./models/index').City;
+const db = require('./models/index');
 
 console.log(Student);
 
-app.get('/students', async (req, res) => {
-    const all_student = await Student.findAll();
-    return res.json({
-        message: "ok",
-        data: all_student
-    });
-})
-
-
 app.listen(3000, async () => {
     console.log("server started");
+    // await db.sequelize.sync({force: true});
+    const student = await Student.findOne({
+        where: {
+            id: 2
+        }
+    });
+    const city = await City.findOne({
+        where: {
+            id: 2
+        }
+    });
 
-    // const new_student = await Student.create({name: "Suchitra", age: 23});
-    // console.log(new_student);
-    // const all_student = await Student.findAll();
-    // console.log(all_student);
-    //const course = await Course.create({name: "Js"});
+    city.addStudent(student);
 });

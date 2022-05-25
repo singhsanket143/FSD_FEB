@@ -10,3 +10,7 @@ test('testing with .then', () => {
         expect(data).toBe("done");
     })
 });
+
+test('one more way', () => {
+    return expect(fun()).resolves.toBe("done"); // resolve/rejects
+})
