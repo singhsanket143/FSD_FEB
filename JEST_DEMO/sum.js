@@ -2,4 +2,11 @@ function sum (a, b) {
     return a + b;
 }
 
-module.exports = sum;
+
+function fun() {
+    return ['mango', 'apple', 'banana'];
+}
+
+module.exports = {
+    sum, fun
+}
